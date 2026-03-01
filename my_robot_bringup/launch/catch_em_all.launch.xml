@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="turtle_catch_them_all" exec="turtle_spawner" name="turtle_spawner">
+        <param name="spawn_frequency" value="1.0"/>
+        <param name="turtle_name_prefix" value="turtle_"/>
+    </node>
+    
+    <node pkg="turtle_catch_them_all" exec="turtle_controller" name="turtle_controller">
+        <param name="catch_closest" value="true"/>
+    </node>
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node">
+        <param name="background_b" value="173"/>
+        <param name="background_g" value="122"/>
+        <param name="background_r" value="90"/>
+    </node>
+</launch>

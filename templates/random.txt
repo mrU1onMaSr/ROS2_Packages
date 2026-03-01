@@ -1,0 +1,11 @@
+future.add_done_callback(self.callback_call_set_led)
+    
+    def callback_call_set_led(self, future):
+        response = future.result()
+        self.get_logger().info(f"CALLBACK WAS {response.success}")
+    
+    def battery_state_sim(self):
+        if self.battery_state_full == 1:
+            self.battery_state_full = 0
+        else:
+            self.battery_state_full = 0
